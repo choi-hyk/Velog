@@ -4,7 +4,8 @@ released at 2025-07-18 19:35:59 KST
 
 updated at 2025-08-22 01:35:33 KST
 
-|[github pages](https://velog.io/tags/github-pages)||----|
+|[github pages](https://velog.io/tags/github-pages)|
+|----|
 
 ## GitHub Pages가 페이지를 배포하는 방법
 

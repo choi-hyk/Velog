@@ -4,7 +4,8 @@ released at 2025-07-21 18:40:54 KST
 
 updated at 2025-08-15 13:30:20 KST
 
-|[github pages](https://velog.io/tags/github-pages)||----|
+|[github pages](https://velog.io/tags/github-pages)|
+|----|
 
 ## Ⓜ️마크다운 컴포넌트
 

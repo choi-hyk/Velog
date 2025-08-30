@@ -4,7 +4,8 @@ released at 2025-07-31 19:39:10 KST
 
 updated at 2025-08-24 17:55:14 KST
 
-|[github pages](https://velog.io/tags/github-pages)||----|
+|[github pages](https://velog.io/tags/github-pages)|
+|----|
 
 ## 🛠️ 렌더링 최적화 구현하기
 

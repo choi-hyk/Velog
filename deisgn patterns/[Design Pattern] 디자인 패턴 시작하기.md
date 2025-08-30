@@ -4,7 +4,8 @@ released at 2025-07-22 16:20:17 KST
 
 updated at 2025-08-15 13:42:06 KST
 
-|[Design Pattern](https://velog.io/tags/Design-Pattern)||----|
+|[Design Pattern](https://velog.io/tags/Design-Pattern)|
+|----|
 
 ## 🎨디자인 패턴 시작하기
 

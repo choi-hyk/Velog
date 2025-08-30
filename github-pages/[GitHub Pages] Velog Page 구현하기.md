@@ -4,7 +4,8 @@ released at 2025-07-29 18:08:36 KST
 
 updated at 2025-08-21 20:42:22 KST
 
-|[github pages](https://velog.io/tags/github-pages)||----|
+|[github pages](https://velog.io/tags/github-pages)|
+|----|
 
 ## 🛠️ Velog Page 구현하기
 
