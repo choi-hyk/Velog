@@ -4,8 +4,7 @@ released at 2025-07-31 23:54:36 KST
 
 updated at 2025-08-28 19:24:58 KST
 
-|[IPP](https://velog.io/tags/IPP)|
-|----|
+|[IPP](https://velog.io/tags/IPP)||----|
 
 ## 😂 출근 7시간 전...
 

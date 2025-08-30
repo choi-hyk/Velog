@@ -4,8 +4,7 @@ released at 2025-07-15 17:13:53 KST
 
 updated at 2025-08-15 13:28:25 KST
 
-|[github pages](https://velog.io/tags/github-pages)|
-|----|
+|[github pages](https://velog.io/tags/github-pages)||----|
 
 ## 🖥️ 자신만의 블로그
 

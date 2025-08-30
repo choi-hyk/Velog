@@ -4,8 +4,9 @@ released at 2025-08-15 19:26:47 KST
 
 updated at 2025-08-30 03:19:46 KST
 
-|[Design Pattern](https://velog.io/tags/Design-Pattern)|[Structure Pattern](https://velog.io/tags/Structure-Pattern)|
-|----|----|
+|[Design Pattern](https://velog.io/tags/Design-Pattern)|[Structure Pattern](https://velog.io/tags/Structure-Pattern)||----|
+
+----|
 
 # Decorator Pattern 🎨
 

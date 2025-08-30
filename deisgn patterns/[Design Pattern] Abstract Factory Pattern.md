@@ -4,8 +4,9 @@ released at 2025-07-27 18:53:38 KST
 
 updated at 2025-08-30 18:46:24 KST
 
-|[Creational Pattern](https://velog.io/tags/Creational-Pattern)|[Design Pattern](https://velog.io/tags/Design-Pattern)|
-|----|----|
+|[Creational Pattern](https://velog.io/tags/Creational-Pattern)|[Design Pattern](https://velog.io/tags/Design-Pattern)||----|
+
+----|
 
 ## 🛠️ Abstract Factory Pattern
 

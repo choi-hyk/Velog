@@ -4,8 +4,7 @@ released at 2025-07-28 19:25:58 KST
 
 updated at 2025-08-28 03:16:55 KST
 
-|[github pages](https://velog.io/tags/github-pages)|
-|----|
+|[github pages](https://velog.io/tags/github-pages)||----|
 
 ## 🛠️ Schedule info 구현하기
 

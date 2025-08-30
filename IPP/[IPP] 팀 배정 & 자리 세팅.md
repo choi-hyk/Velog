@@ -4,8 +4,7 @@ released at 2025-08-09 23:52:40 KST
 
 updated at 2025-08-28 19:20:54 KST
 
-|[IPP](https://velog.io/tags/IPP)|
-|----|
+|[IPP](https://velog.io/tags/IPP)||----|
 
 ## 😁팀 배정
 

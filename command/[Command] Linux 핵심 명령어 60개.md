@@ -4,8 +4,9 @@ released at 2025-08-12 09:31:08 KST
 
 updated at 2025-08-22 20:51:35 KST
 
-|[command](https://velog.io/tags/command)|[linux](https://velog.io/tags/linux)|
-|----|----|
+|[command](https://velog.io/tags/command)|[linux](https://velog.io/tags/linux)||----|
+
+----|
 
 ## 1. **ls** — 디렉터리 목록 표시 List
 

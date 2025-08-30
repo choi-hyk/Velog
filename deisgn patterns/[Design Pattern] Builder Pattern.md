@@ -4,8 +4,9 @@ released at 2025-07-31 20:28:00 KST
 
 updated at 2025-08-16 13:13:41 KST
 
-|[Creational Pattern](https://velog.io/tags/Creational-Pattern)|[Design Pattern](https://velog.io/tags/Design-Pattern)|
-|----|----|
+|[Creational Pattern](https://velog.io/tags/Creational-Pattern)|[Design Pattern](https://velog.io/tags/Design-Pattern)||----|
+
+----|
 
 ## 🛠️ Builder Pattern
 

@@ -4,8 +4,9 @@ released at 2025-08-04 22:11:10 KST
 
 updated at 2025-08-24 00:40:49 KST
 
-|[AI](https://velog.io/tags/AI)|[github pages](https://velog.io/tags/github-pages)|
-|----|----|
+|[AI](https://velog.io/tags/AI)|[github pages](https://velog.io/tags/github-pages)||----|
+
+----|
 
 ## 🛠️ GitHub Page 구현하기 with Cursor AI
 
