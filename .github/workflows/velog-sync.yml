@@ -2,40 +2,34 @@ name: velog-sync (daily KST 03:00)
 
 on:
   schedule:
-    # 매일 18:00 UTC = KST 03:00
-    - cron: "0 18 * * *"
+    - cron: "0 18 * * *"   # 매일 03:00 KST
   workflow_dispatch: {}
 
 permissions:
-  contents: write   # 커밋/푸시 위해 필요
+  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true   # GITHUB_TOKEN 사용
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          cache: "none"   # 캐시 비활성화 → requirements.txt 없어도 됨
 
       - name: Install velog-sync
         run: |
           python -m pip install --upgrade pip
-          pip install velog-sync tzdata
+          pip install velog-sync
 
       - name: Run velog-sync
         env:
           VELOG_USERNAME: ${{ vars.VELOG_USERNAME }}
-        run: |
-          # 결과물은 기본적으로 repo 루트의 velog_posts/에 생성됨
-          velog-sync
+        run: velog-sync
 
       - name: Configure Git
         run: |
