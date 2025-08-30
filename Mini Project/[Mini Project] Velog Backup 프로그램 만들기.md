@@ -2,7 +2,7 @@
 
 released at 2025-08-30 23:36:55 KST
 
-updated at 2025-08-30 23:53:13 KST
+updated at 2025-08-31 01:33:09 KST
 
 |[Python Package Index](https://velog.io/tags/Python-Package-Index)|[graphql](https://velog.io/tags/graphql)|[mini project](https://velog.io/tags/mini-project)|[pypi](https://velog.io/tags/pypi)|[python deploy](https://velog.io/tags/python-deploy)|[velog](https://velog.io/tags/velog)|
 |----|----|----|----|----|----|
@@ -216,7 +216,6 @@ pypi- 접두사를 포함하여 비밀번호를 토큰 값으로 설정하세요
 - velog_sync-0.1.0.tar.gz (소스 배포본)
 - velog_sync-0.1.0-py3-none-any.whl (휠 파일)
 
-좋습니다. 이어지는 배포 과정을 지금까지 쓰신 말투 그대로 정리해 드리겠습니다.
 
 ---
 
@@ -228,7 +227,7 @@ pypi- 접두사를 포함하여 비밀번호를 토큰 값으로 설정하세요
 twine upload dist/*
 ```
 
-여기서 `.pypirc` 파일에 등록해둔 토큰이 자동으로 사용된다. 업로드가 성공하면 PyPI 패키지 페이지에 바로 반영된다. (예: [https://pypi.org/project/velog-sync/](https://pypi.org/project/velog-sync/))
+여기서 `.pypirc` 파일에 등록해둔 토큰이 자동으로 사용된다. 업로드가 성공하면 PyPI 패키지 페이지에 바로 반영된다. 
 
 ---
 
@@ -287,7 +286,7 @@ jobs:
                   skip-existing: true  # 이미 업로드된 파일이 있으면 스킵(중복 업로드 방지)
 ```
 
-위와 같이 구성이 가능한데, 살펴볼 점은 태그랑 인증 방법이다. GitHub Actions는 태그 설정을 통해 배포 자동화가 이루어진다.  예를 들어 `git tag v0.1.0` 을 하게 되면, 바뀐 버전이 해당 액션으로 자동 뱊퐆가 이루어진다.
+위와 같이 구성이 가능한데, 살펴볼 점은 태그랑 인증 방법이다. GitHub Actions는 태그 설정을 통해 배포 자동화가 이루어진다.  예를 들어 `git tag v0.1.0` 을 하게 되면, 바뀐 버전이 해당 액션으로 자동 배포가 이루어진다.
 
 다음은 PyPI의 인증 방식인데, 기존에 로컬에서는 Token을 발급받아서, 배포를 하였는데, PyPI는 GitHub Actions와 같이 자동화 툴들을 위해  **PyPI Trusted Publisher**라는 방법을 제공한다. 예전처럼 `.pypirc`에 비밀번호 저장하는 게 아니라, GitHub OIDC(OpenID Connect) 토큰을 이용해서 **PyPI Trusted Publisher**로 인증한다. 즉, GitHub 저장소와 PyPI 계정을 연결해두면 비밀번호/토큰 노출 없이 안전하게 배포 가능하다.  **PyPI Trusted Publisher** 를 사용하려면 자신의 PyPI 계정에 해당 GitHub repo를 등록하면 된다.
 
@@ -295,7 +294,7 @@ jobs:
 
 난 이렇게 등록을 하였다. 
 
-실행을 할때는 패치된 버전의 코드와 `pyproject.toml` 의 버전을 올리고 push와 push tag를 해줘야 한다. 참고로 `git tag` 명령어를 통해 tag를 등록하고 기존의 푸쉬 방법 처럼 `git push v0.1.0` 과 같은 방법으로 배포를 해줄 수 있다. 이때 주의할 점은 반드시 패치된 버전의 코드와 `pyproject.toml` 의 버전을 푸쉬해 놓은 상태여야 한다.
+실행을 할때는 패치된 버전의 코드와 `pyproject.toml` 의 버전을 올리고 push와 push tag를 해줘야 한다. 참고로 `git tag` 명령어를 통해 tag를 등록하고 기존의 푸쉬 방법 처럼 `git push origin v0.1.0` 과 같은 방법으로 배포를 해줄 수 있다. 이때 주의할 점은 반드시 패치된 버전의 코드와 `pyproject.toml` 의 버전을 푸쉬해 놓은 상태여야 한다.
 
 ---
 
@@ -360,7 +359,7 @@ jobs:
                   fi
 ```
 
- yml 파일에서는 내가 만든 패키지인 `velog-sync`를 다운받고 해당 패키지를 사용해서 등록한 유저 환경변수를 통해 GitHub에 업로드 해준다.
+yml 파일에서는 내가 만든 패키지인 `velog-sync`를 다운받고 해당 패키지를 사용해서 등록한 유저 환경변수를 통해 GitHub에 업로드 해준다.
 
 <img width="846" height="824" alt="Image" src="https://github.com/user-attachments/assets/3196d68c-5232-404d-806f-31739d6b9677" />
 
