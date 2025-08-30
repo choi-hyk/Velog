@@ -36,6 +36,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Rebase with remote main
+        run: |
+          git pull --rebase --autostash origin main
+
       - name: Commit if changed
         env:
           TZ: Asia/Seoul
