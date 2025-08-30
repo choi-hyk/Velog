@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "none"   # 캐시 비활성화 → requirements.txt 없어도 됨
 
       - name: Install velog-sync
         run: |
