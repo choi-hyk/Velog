@@ -4,9 +4,9 @@
 
 | 시리즈 | 포스트 수 |
 |---|---:|
+| [AI](./AI/) | 6 |
 | [Mini Project](./Mini%20Project/) | 1 |
 | [deisgn patterns](./deisgn%20patterns/) | 8 |
-| [AI](./AI/) | 5 |
 | [LangChain](./LangChain/) | 3 |
 | [command](./command/) | 1 |
 | [IPP](./IPP/) | 2 |
