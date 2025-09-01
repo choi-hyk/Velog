@@ -2,7 +2,7 @@
 
 released at 2025-08-31 16:51:56 KST
 
-updated at 2025-08-31 22:53:12 KST
+updated at 2025-09-01 23:06:28 KST
 
 |[Bridge Pattern](https://velog.io/tags/Bridge-Pattern)|[Deisgn Pattern](https://velog.io/tags/Deisgn-Pattern)|[Structure Pattern](https://velog.io/tags/Structure-Pattern)|
 |----|----|----|
