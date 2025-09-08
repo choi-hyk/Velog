@@ -2,7 +2,7 @@
 
 released at 2025-08-31 16:51:56 KST
 
-updated at 2025-09-01 23:06:28 KST
+updated at 2025-09-08 22:58:54 KST
 
 |[Bridge Pattern](https://velog.io/tags/Bridge-Pattern)|[Deisgn Pattern](https://velog.io/tags/Deisgn-Pattern)|[Structure Pattern](https://velog.io/tags/Structure-Pattern)|
 |----|----|----|
@@ -13,7 +13,7 @@ updated at 2025-09-01 23:06:28 KST
 
 <img width="610" height="189" alt="Image" src="https://github.com/user-attachments/assets/efba71ae-dd25-430c-b038-8eecff148e32" />
 
-위의 이미지는 GOF 책에서 예시로 든 사용자 인터페이스 툴킷인 `Winodow` 클래스의 **클래스 폭발**을 보여준다. 툴킷인 `Window` 클래스를 사용해서 우리가 각 플랫폼의 특성이 반영된 `XWindow` 와 `PMWindow` 플랫폼을 구현했다고 해보자, 해당 구현만 존재하면 사용하는데는 문제가 없을 것이다. 그런데, `Window` 구현자가 새로운 기능을 담은 `Winodw` 인 `IconWindow` 를 출시 했다. 그러면 우리는 기존의 `XWindow` 와 `PMWindow` 를 다시 `IconWindow` 에 상속 받아서 해당 `Icon` 기능이 포함된 클래스들을 재정의 해야 한다. 매우 번거롭지 않은가?
+위의 이미지는 GOF 책에서 예시로 든 사용자 인터페이스 툴킷인 `Winodow` 클래스의 **클래스 폭발**을 보여준다. 툴킷인 `Window` 클래스를 사용해서 우리가 각 플랫폼의 특성이 반영된 `XWindow` 와 `PMWindow` 플랫폼을 구현했다고 해보자, 해당 구현만 존재하면 사용하는데는 문제가 없을 것이다. 그런데, `Window` 구현자가 새로운 기능을 담은 `Window` 인 `IconWindow` 를 출시 했다. 그러면 우리는 기존의 `XWindow` 와 `PMWindow` 를 다시 `IconWindow` 에 상속 받아서 해당 `Icon` 기능이 포함된 클래스들을 재정의 해야 한다. 매우 번거롭지 않은가?
 
 그래서 사용되는 패턴이 **Bridge Pattern**이다.
 
@@ -264,6 +264,6 @@ int main() {
 
 **Bridge Pattern**은 **추상과 구현을 분리해서 독립적으로 확장할 수 있도록 만들어주는 구조적 패턴**이다. 예시에서 보았듯이, **추상화 계층과 구현 계층을 분리해두면 새로운 기능을 추가하더라도 클래스가 불필요하게 늘어나지 않고 훨씬 유연하게 확장할 수 있다**. 즉, 어댑터 패턴이 기존 인터페이스의 불일치를 해결하기 위한 사후적 접근이었다면, **Bridge Pattern은 처음부터 확장을 고려한 선제적 설계 방식**이라고 볼 수 있다.
 
-다음 글에서는 마찬가지로 구조 패턴 중 하나인 'Composite Pattern'을 다뤄볼 생각이다. 컴포지트 패턴은 객체들을 **트리 구조로 묶어서 부분-전체 계층을 표현**하는 데 초점이 맞춰져 있다. 즉, **개별 객체와 객체 집합을 동일한 방식으로 다룰 수 있게 해주는 패턴**인데, 이를 통해 복잡한 계층 구조도 단순하게 다룰 수 있는 장점이 있다.
+다음 글에서는 마찬가지로 구조 패턴 중 하나인 `Composite Pattern`을 다뤄볼 생각이다. `Composite Pattern`은 객체들을 **트리 구조로 묶어서 부분-전체 계층을 표현**하는 데 초점이 맞춰져 있다. 즉, **개별 객체와 객체 집합을 동일한 방식으로 다룰 수 있게 해주는 패턴**인데, 이를 통해 복잡한 계층 구조도 단순하게 다룰 수 있는 장점이 있다.
 
 [[참고] Bridge Pattern](https://www.cs.unc.edu/~stotts/GOF/hires/pat4bfso.htm) 
