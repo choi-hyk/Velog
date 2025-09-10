@@ -4,6 +4,7 @@
 
 | 시리즈 | 포스트 수 |
 |---|---:|
+| [Python](./Python/) | 1 |
 | [deisgn patterns](./deisgn%20patterns/) | 9 |
 | [AI](./AI/) | 6 |
 | [Mini Project](./Mini%20Project/) | 1 |
