@@ -2,13 +2,13 @@
 
 released at 2025-10-09 17:58:43 KST
 
-updated at 2025-10-09 21:21:14 KST
+updated at 2025-10-11 19:00:59 KST
 
 |[FastAPI](https://velog.io/tags/FastAPI)|[Sync/Async](https://velog.io/tags/Sync/Async)|[WAS](https://velog.io/tags/WAS)|[asgi](https://velog.io/tags/asgi)|[concurrency](https://velog.io/tags/concurrency)|[python](https://velog.io/tags/python)|[동기/비동기](https://velog.io/tags/동기/비동기)|[동시성](https://velog.io/tags/동시성)|
 |----|----|----|----|----|----|----|----|
 
 # 🖥️ 시작하기에 앞서...
-이제 회사에서 본격적으로 개발 일을 시작한지 1달 반이 다되간다. 현재 `Svelte`와 `FastAPI` 기반의 Monolothic 구조의 프로젝트를 유지보수 하고 있는데, 해당 프로젝트에서 이해가 안되는 부분이 매우 많이 있다. 특히 `FastAPI`의 `coroutine`을 통한 라우터 설정에 애를 먹고 있는데, 규모가 큰 오픈소스다 보니까, 어떤 기준으로 해당 함수는 `async`를 통해 코루틴 처리를 하였는지, 어떤 함수는 일반 함수 정의를 통해 `thread pool`로 관리하는지 이해가 안되고 있다. 
+이제 회사에서 본격적으로 개발 일을 시작한지 1달 반이 다 되어간다. 현재 `Svelte`와 `FastAPI` 기반의 Monolothic 구조의 프로젝트를 유지보수 하고 있는데, 해당 프로젝트에서 이해가 안되는 부분이 매우 많이 있다. 특히 `FastAPI`의 `coroutine`을 통한 라우터 설정에 애를 먹고 있는데, 규모가 큰 오픈소스다 보니까, 어떤 기준으로 해당 함수는 `async`를 통해 코루틴 처리를 하였는지, 어떤 함수는 일반 함수 정의를 통해 `thread pool`로 관리하는지 이해가 안되고 있다. 
 
 아마도 나 같은 신입 개발자들은 이러한 동시성 관리가 익숙치 않을 것이다. 신입 개발자들은 다른 WAS 프레임워크들 또한 이러한 동시성 관리, 더 나아가 `Python` 기반이 아닌 `Spring Boot` 같은 다른 언어 진영의 병렬 처리 같은 물리적 구조를 고려한 프로그래밍을 경험할 기회가 없다. 본인이 개인 프로젝트나, 백엔드 서비스를 개발한 경험이 있어도 실무에서 요구하는 것 과는 분명히 차이가 있을 것이다. 
 
@@ -85,7 +85,7 @@ def get_user_history_blocking(username: str):
 
 > `FastAPI` 에서는 일반 def 요청은 쓰레드 풀의 개별적인 쓰레드 워커에서 실행된다. 해당 부분은 다음 글에서 자세히 설명을 하고 지금은 단일 쓰레드에서 실행되는 것으로 가정 하겠다.
 
-사용자1이 `login_blocking()`, 사용자2가 `get_user_info_blocking()` 그리고 사용자3이 `get_user_history_blocking()`을 순서대로 요청을 보냈다고 가정하자. 또한 DML 실행시간은 1초라고 가정하자. 그리고 **Task Queue**에는 실행 프로세스의 2개의 쓰레드가 Task로 들어간다고 가정하자. **요청을 받는 메인 쓰레드**와, **요청을 처리하는 워커 쓰레드** 2개로 가정하자. 간단히 생각해보면, 이미 실행 중인 프로세스에 추가적인 작업이 쌓이는 것을 생각하면 된다. 메인 워커 쓰레드를 $W$이라 하겠다. 또한 각 Task Queue에는 쓰레드 단위로 Task가 들어간다고 가정하겠다. 
+8000포트에서 Listen 중인 상태로 프로세스를 실행하고, 사용자1이 `login_blocking()`, 사용자2가 `get_user_info_blocking()` 그리고 사용자3이 `get_user_history_blocking()`을 순서대로 요청을 보냈다고 가정하자. 또한 DML 실행시간은 1초라고 가정하자. 그리고 **Task Queue**에는 실행 프로세스의 쓰레드가 Task로 들어간다고 가정하자. 여기서 고려해야 되는 부분은,**쓰레드가 하나이므로 만약 쓰레드가 Waiting 상태가 되면, 요청을 받지 못한다는 것이다.** 간단히 생각해보면, 이미 실행 중인 프로세스에 추가적인 작업이 쌓이는 것을 생각하면 된다. 메인 워커 쓰레드를 $W$이라 하겠다. 또한 각 Task Queue에는 쓰레드 단위로 Task가 들어간다고 가정하겠다. 
 
 OS 수준에서는 1개의 프로세스와 1개의 단일 쓰레드를 **Task Queue**에서 실행 중이지만, 프로세스 관점에서는 프로세스에 추가적인 작업이 쌓이고 있다. 사용자1의 `login_blocking()`가 들어오는 순간 현재 쓰레드는 약 1초간 `Waiting` 상태가 될 것이다. `Waiting` 이 되는 1초 동안 나머지 2개의 요청을 받았다고 가정하자. 또한 2개의 코어로 병렬 처리가 된다고 가정하자.
 
@@ -109,7 +109,7 @@ Coroutine이 바로 이 비동기 처리를 구현하는 기법이다. OS는 Con
 
 <img width="1016" height="754" alt="Image" src="https://github.com/user-attachments/assets/c1df682b-aa75-42fe-be77-4b4bfe25b7f1" />
 
-asyncio sleep 과 cursor.execute 같은 I/O 바운드가 실행되면, Event Loop는 등록된 다른 코루틴을 실행한다. 즉 위의 그림에서 coroutine1 이 asyncio sleep을 통해 대기 상태에 들어가면  Event Loop는 Accept Queue에서 바로 $R_2$를 가져와서 coroutine2로 실행을 한다. 이때 오해를 하면 안되는 것이, **병렬 실행이 절대 아니란 점**이다. 위에 그림만 보면 오해를 할 수도 있지만, coroutine이 실행되는 로직은 기존에 실행 중이던 coroutine이 I/O 바운드로 인해 대기 상태에 들어갔을때만, 실행이 되는 **동시성 강화**이다. 따라서 위에서 OS 수준의 Context switch로 비유한 이유가 바로 이러한 Event Loop를 통한 coroutine 실행 관리 로직 때문이다. 이러한 동시성 강화를 통해 약 $T_{1.5}$ 에 모든 실행이 완료되는 것을 볼 수 있다. 
+`asyncio sleep()` 과 `cursor.execute()` 같은 I/O 바운드가 실행되면, Event Loop는 등록된 다른 코루틴을 실행한다. 즉 위의 그림에서 coroutine1 이 `asyncio sleep()`을 통해 대기 상태에 들어가면  Event Loop는 Accept Queue에서 바로 $R_2$를 가져와서 coroutine2로 실행을 한다. 이때 오해를 하면 안되는 것이, coroutine은 **병렬 실행이 절대 아니란 점**이다. 위에 그림만 보면 오해를 할 수도 있지만, coroutine이 실행되는 로직은 기존에 실행 중이던 coroutine이 I/O 바운드로 인해 대기 상태에 들어갔을때만, 실행이 되는 **동시성 강화**이다.  따라서 위에서 OS 수준의 Context switch로 비유한 이유가 바로 이러한 Event Loop를 통한 coroutine 실행 관리 로직 때문이다. 이러한 동시성 강화를 통해 약 $T_{1.5}$ 에 모든 실행이 완료되는 것을 볼 수 있다. 기억하자 **coroutine은 단일 쓰레드 내에서 이루어지는 비동기를 통한 동시성 강화 기법**이라는 것을.
 
 > 비동기 코루틴은 단일 스레드 내에서 오직 하나의 Call Stack 위에서만 실행되며, 동시에 여러 coroutine이 CPU를 점유하는 일은 없다.
 
@@ -119,6 +119,6 @@ OS 수준에서는 단순히 $W$를 실행하고 있으면 되고 이러한 비�
 
 ## 😘 마무리
 
-**비동기 모델에서의 동시성 강화는 OS 수준의 선점형 스케줄링(preemptive scheduling) 이 아닌, Event Loop를 중심으로 한 협력형(Cooperative) 스케줄링** 에 의해 이루어진다. Event Loop는 OS의 CPU 스케줄러에 대응되는 역할을 수행하며, coroutine 간 전환(Task Switching)은 커널 수준의 Context Switch 대신 사용자 레벨에서 수행되는 **가벼운 실행 흐름 전환(Control-flow switching) 으로 처리된다.** 이번 글에서는 FastAPI를 비롯한 비동기 처리가 논리적으로 어떻게 이루어지는 지와 OS 수준과 애플리케이션 수준에서 헷갈리지 않도록 설명을 해보았다. 다음 글에서는 FastAPI의 비동기 처리 로직을 코드를 통해 알아보고 일반 def 선언은 어떻게 처리되는지 그리고 lifespan을 통한 coroutine 처리를 심도있게 다뤄보겠다.
+**비동기 모델에서의 동시성 강화는 OS 수준의 선점형 스케줄링(preemptive scheduling) 이 아닌, Event Loop를 중심으로 한 협력형(Cooperative) 스케줄링** 에 의해 이루어지고 Event Loop는 OS의 CPU 스케줄러에 대응되는 역할을 수행하며, coroutine 간 전환(Task Switching)은 커널 수준의 Context Switch 대신 사용자 레벨에서 수행되는 **가벼운 실행 흐름 전환(Control-flow switching) 으로 처리된다.** 이번 글에서는 FastAPI를 비롯한 비동기 처리가 논리적으로 어떻게 이루어지는 지와 OS 수준과 애플리케이션 수준에서 헷갈리지 않도록 설명을 해보았다. 다음 글에서는 FastAPI의 비동기 처리 로직을 코드를 통해 알아보고 일반 def 선언은 어떻게 처리되는지 그리고 lifespan을 통한 coroutine 처리를 심도있게 다뤄보겠다.
 
 
