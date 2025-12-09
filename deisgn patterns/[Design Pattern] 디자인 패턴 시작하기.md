@@ -2,7 +2,7 @@
 
 released at 2025-07-22 16:20:17 KST
 
-updated at 2025-10-28 02:45:29 KST
+updated at 2025-12-09 15:14:33 KST
 
 |[Design Pattern](https://velog.io/tags/Design-Pattern)|
 |----|
