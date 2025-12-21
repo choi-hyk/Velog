@@ -2,7 +2,7 @@
 
 released at 2025-12-20 18:00:59 KST
 
-updated at 2025-12-20 21:30:17 KST
+updated at 2025-12-22 00:06:39 KST
 
 |[FastAPI](https://velog.io/tags/FastAPI)|[MCP](https://velog.io/tags/MCP)|[fastapi-mcp](https://velog.io/tags/fastapi-mcp)|[project](https://velog.io/tags/project)|
 |----|----|----|----|

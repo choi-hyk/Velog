@@ -2,7 +2,7 @@
 
 released at 2025-09-11 00:11:21 KST
 
-updated at 2025-12-09 11:47:41 KST
+updated at 2025-12-22 00:06:49 KST
 
 |[FastAPI](https://velog.io/tags/FastAPI)|[Pydantic](https://velog.io/tags/Pydantic)|[asgi](https://velog.io/tags/asgi)|[python](https://velog.io/tags/python)|
 |----|----|----|----|
