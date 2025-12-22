@@ -2,7 +2,7 @@
 
 released at 2025-08-17 18:03:08 KST
 
-updated at 2025-12-17 04:36:58 KST
+updated at 2025-12-23 00:18:31 KST
 
 |[AI](https://velog.io/tags/AI)|[Deep Learning](https://velog.io/tags/Deep-Learning)|[LLM](https://velog.io/tags/LLM)|[transformer](https://velog.io/tags/transformer)|
 |----|----|----|----|
@@ -193,9 +193,9 @@ $d_{model} = 512$라면, 각 단어 토큰은 512개의 숫자로 표현된다.
 
 "바나나"라는 토큰이 들어오면 벡터
 
-  $$
-  (0.12, -0.33, 0.98, \dots, 0.21) \in \mathbb{R}^{512}
-  $$
+$$
+(0.12, -0.33, 0.98, \dots, 0.21) \in \mathbb{R}^{512}
+$$
 
 이런 식으로 512차원의 공간에서 하나의 점으로 표현된다. 즉 $\mathbb{R}^{512}$ 는 모델의 용량이 된다.
 
@@ -203,9 +203,9 @@ $d_{model} = 512$라면, 각 단어 토큰은 512개의 숫자로 표현된다.
 예를 들어, $d_{model} = 512$이고 Head 수가 $h = 8$이라면,
 각 Head는 차원을 나눠서
 
-  $$
-  d_{head} = \frac{d_{model}}{h} = 64
-  $$
+$$
+d_{head} = \frac{d_{model}}{h} = 64
+$$
 
 의 크기로 Attention 연산을 한다.
 전체 임베딩 512차원을 **8개의 시각(Head)으로 쪼개서 동시에 바라본다**고 이해하면 된다.
@@ -217,9 +217,9 @@ $d_{model} = 512$라면, 각 단어 토큰은 512개의 숫자로 표현된다.
 
 여기서 앞에서 이야기한 가중치의 크기와 $d_k, d_v$를 $\frac{d_{model}}{h}$로 맞추는 이유가 여기서 나온다.
 
- $$
- X \in \mathbb{R}^{n \times d_{\text{model}}}
- $$
+$$
+X \in \mathbb{R}^{n \times d_{\text{model}}}
+$$
 
 위의 식처럼 입력값 $X$의 크기는 $n$개의 토큰에서 차원 ($d_{\text{model}}$)을 곱한 값이다. 그러면 각 $Q$, $K$, $V$를 생성하기 위해 가중치와 곱하게 되는데 이때 $h$개 ($d_k$, $d_v$) head로 Self Attention을 하게 된다. 그 뜻은 원래 차원 각각에 $h$개의 특징 추가시키는 것이다. 위의 예시인 경우 512개의 차원에서 8개의 특징을 추가하여 512와 8을 곱한 98,304개가 된다.   
 

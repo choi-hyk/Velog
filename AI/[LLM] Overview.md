@@ -2,7 +2,7 @@
 
 released at 2025-08-16 16:48:18 KST
 
-updated at 2025-12-21 09:40:12 KST
+updated at 2025-12-22 23:46:16 KST
 
 |[AI](https://velog.io/tags/AI)|[LLM](https://velog.io/tags/LLM)|
 |----|----|
@@ -60,7 +60,7 @@ updated at 2025-12-21 09:40:12 KST
 
 ### GPT (Generative Pre-trained Transformer)
 
-**GPT**는 **OpenAI**에서 개발한 모델로, **디코더만**으로 구성되어 있다. **GPT**는 **단방향(Unidirectional)** 으로 학습하며, 문맥을 기반으로 **다음 단어를 예측**하는 방식이다. 위 예시에서, GPT는 `나는 늦게 일어나서 학교까지`라는 문장이 주어졌을 때, **이전 단어들**만을 참고하여 \*\*`뛰어갔다`\*\*를 예측한다. 이 구조는 새로운 문장을 **생성하는 과제(NLG, Natural Language Generation)** 에 뛰어나다.
+**GPT**는 **OpenAI**에서 개발한 모델로, **디코더만**으로 구성되어 있다. **GPT**는 **단방향(Unidirectional)** 으로 학습하며, 문맥을 기반으로 **다음 단어를 예측**하는 방식이다. 위 예시에서, GPT는 `나는 늦게 일어나서 학교까지`라는 문장이 주어졌을 때, **이전 단어들**만을 참고하여 **`뛰어갔다`**를 예측한다. 이 구조는 새로운 문장을 **생성하는 과제(NLG, Natural Language Generation)** 에 뛰어나다.
 
 ### T5 (Text-to-Text Transfer Transformer)
 

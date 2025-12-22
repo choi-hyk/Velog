@@ -2,7 +2,7 @@
 
 released at 2025-10-09 17:58:43 KST
 
-updated at 2025-12-02 15:16:52 KST
+updated at 2025-12-22 11:46:15 KST
 
 |[FastAPI](https://velog.io/tags/FastAPI)|[Sync/Async](https://velog.io/tags/Sync/Async)|[WAS](https://velog.io/tags/WAS)|[asgi](https://velog.io/tags/asgi)|[concurrency](https://velog.io/tags/concurrency)|[python](https://velog.io/tags/python)|[동기/비동기](https://velog.io/tags/동기/비동기)|[동시성](https://velog.io/tags/동시성)|
 |----|----|----|----|----|----|----|----|
