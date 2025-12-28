@@ -4,6 +4,7 @@
 
 | 시리즈 | 포스트 수 |
 |---|---:|
+| [github-pages](./github-pages/) | 13 |
 | [Project](./Project/) | 1 |
 | [FastAPI](./FastAPI/) | 1 |
 | [Python](./Python/) | 1 |
@@ -13,5 +14,4 @@
 | [LangChain](./LangChain/) | 3 |
 | [command](./command/) | 1 |
 | [IPP](./IPP/) | 2 |
-| [github-pages](./github-pages/) | 12 |
 | [daily](./daily/) | 1 |
