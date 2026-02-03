@@ -2,7 +2,7 @@
 
 released at 2025-07-15 16:53:15 KST
 
-updated at 2026-01-28 00:19:59 KST
+updated at 2026-02-03 08:33:04 KST
 
 ### *늦게나마 시작해 보는 Velog*
 
