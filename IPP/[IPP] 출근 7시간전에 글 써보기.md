@@ -2,7 +2,7 @@
 
 released at 2025-07-31 23:54:36 KST
 
-updated at 2026-02-12 03:02:56 KST
+updated at 2026-03-10 22:03:25 KST
 
 |[IPP](https://velog.io/tags/IPP)|
 |----|
