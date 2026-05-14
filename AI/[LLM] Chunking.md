@@ -2,7 +2,7 @@
 
 released at 2025-08-14 12:26:50 KST
 
-updated at 2026-05-13 15:53:08 KST
+updated at 2026-05-14 14:13:19 KST
 
 |[AI](https://velog.io/tags/AI)|[Deep Learning](https://velog.io/tags/Deep-Learning)|[LLM](https://velog.io/tags/LLM)|[chunking](https://velog.io/tags/chunking)|
 |----|----|----|----|
