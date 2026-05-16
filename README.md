@@ -4,6 +4,8 @@
 
 | 시리즈 | 포스트 수 |
 |---|---:|
+| [개발 기법](./개발%20기법/) | 1 |
+| [daily](./daily/) | 2 |
 | [github-pages](./github-pages/) | 13 |
 | [HippoBox](./HippoBox/) | 1 |
 | [FastAPI](./FastAPI/) | 1 |
@@ -14,4 +16,3 @@
 | [LangChain](./LangChain/) | 3 |
 | [command](./command/) | 1 |
 | [IPP](./IPP/) | 2 |
-| [daily](./daily/) | 1 |
