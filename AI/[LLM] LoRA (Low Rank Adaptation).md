@@ -2,7 +2,7 @@
 
 released at 2025-08-31 15:37:05 KST
 
-updated at 2026-07-21 14:15:44 KST
+updated at 2026-07-24 02:44:38 KST
 
 |[AI](https://velog.io/tags/AI)|[Fine Tuning](https://velog.io/tags/Fine-Tuning)|[LLM](https://velog.io/tags/LLM)|[Lora](https://velog.io/tags/Lora)|
 |----|----|----|----|
