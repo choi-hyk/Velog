@@ -2,7 +2,7 @@
 
 released at 2025-08-12 09:31:08 KST
 
-updated at 2026-08-15 00:08:20 KST
+updated at 2026-08-16 04:38:18 KST
 
 |[command](https://velog.io/tags/command)|[linux](https://velog.io/tags/linux)|
 |----|----|
