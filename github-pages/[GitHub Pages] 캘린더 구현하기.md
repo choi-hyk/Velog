@@ -2,7 +2,7 @@
 
 released at 2025-07-22 15:32:29 KST
 
-updated at 2026-09-10 23:10:44 KST
+updated at 2026-09-12 02:31:43 KST
 
 |[github pages](https://velog.io/tags/github-pages)|
 |----|
