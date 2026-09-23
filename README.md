@@ -4,6 +4,7 @@
 
 | 시리즈 | 포스트 수 |
 |---|---:|
+| [unserized](./unserized/) | 1 |
 | [개발 기법](./개발%20기법/) | 2 |
 | [daily](./daily/) | 2 |
 | [github-pages](./github-pages/) | 13 |
