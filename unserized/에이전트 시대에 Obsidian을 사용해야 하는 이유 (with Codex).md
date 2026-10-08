@@ -2,7 +2,7 @@
 
 released at 2026-09-23 21:17:33 KST
 
-updated at 2026-10-07 16:41:52 KST
+updated at 2026-10-09 01:26:40 KST
 
 |[codex](https://velog.io/tags/codex)|[obsidian](https://velog.io/tags/obsidian)|[tmux](https://velog.io/tags/tmux)|
 |----|----|----|
