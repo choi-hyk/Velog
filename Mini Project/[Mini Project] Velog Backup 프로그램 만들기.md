@@ -2,7 +2,7 @@
 
 released at 2025-08-30 23:36:55 KST
 
-updated at 2026-10-09 07:27:05 KST
+updated at 2026-10-09 19:48:52 KST
 
 |[Python Package Index](https://velog.io/tags/Python-Package-Index)|[graphql](https://velog.io/tags/graphql)|[mini project](https://velog.io/tags/mini-project)|[pypi](https://velog.io/tags/pypi)|[python deploy](https://velog.io/tags/python-deploy)|[velog](https://velog.io/tags/velog)|
 |----|----|----|----|----|----|
