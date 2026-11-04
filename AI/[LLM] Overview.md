@@ -2,7 +2,7 @@
 
 released at 2025-08-16 16:48:18 KST
 
-updated at 2026-11-04 06:45:52 KST
+updated at 2026-11-05 06:21:31 KST
 
 |[AI](https://velog.io/tags/AI)|[LLM](https://velog.io/tags/LLM)|
 |----|----|
