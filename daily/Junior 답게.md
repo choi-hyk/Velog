@@ -2,7 +2,7 @@
 
 released at 2026-05-16 15:16:14 KST
 
-updated at 2026-11-05 12:27:04 KST
+updated at 2026-11-07 13:20:12 KST
 
 # 다시 취준 개발자로 돌아오며
 
